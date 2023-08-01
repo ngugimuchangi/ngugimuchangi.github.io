@@ -1,0 +1,185 @@
+@use './variables' as *;
+/* ______COMPONENTS________*/
+/* NAVIGATION BARS */
+.nav {
+  .nav_list {
+    padding-block: $base-padding;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+  }
+}
+
+/* BUTTONS */
+.button {
+  padding: $base-padding * 0.75 $base-padding;
+  border-radius: $base-border-radius * 0.5;
+  display: block;
+  font-weight: 500;
+}
+
+.button_primary {
+  color: white;
+  background-color: $clr-secondary;
+  &:hover {
+    background-color: lighten($clr-secondary, 10%);
+  }
+}
+.button_secondary {
+  background-color: $clr-accent;
+  border: 1px solid $clr-accent;
+
+  &:hover {
+    background-color: $clr-accent;
+    border: 1px solid $clr-accent;
+    box-shadow: 0 0 0.2rem 0 $clr-accent;
+    transform: translateY(-0.25rem);
+    transition: all 0.3s ease-in-out;
+  }
+  @media (min-width: 768px) {
+    color: white;
+    background-color: transparent;
+  }
+}
+
+/* SKILL CARD */
+
+.skill_card {
+  width: 112px;
+  height: 112px;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  background-color: $clr-secondary;
+  animation: infinite-slide 2s linear infinite forwards;
+
+  .skill_card_image {
+    width: 48px;
+    height: 48px;
+    margin-inline: auto;
+  }
+}
+
+/* PROJECT CARD */
+.project_card {
+  margin-block: $base-margin;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .project_image {
+    max-width: 768px;
+    margin-inline: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .project_text {
+    max-width: 70ch;
+    margin-bottom: $base-margin;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $base-margin;
+    .project_title {
+      font-weight: 600;
+    }
+    .project_technologies {
+      color: $clr-accent;
+    }
+  }
+  .project_demo_button {
+    margin-inline: auto;
+  }
+  @media (min-width: 960px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    .project_image {
+      width: 50%;
+      &:hover {
+        animation: scroll-preview 10s linear 2 alternate;
+      }
+      @keyframes scroll-preview {
+        to {
+          object-position: center -500px;
+        }
+      }
+    }
+    .project_text_and_buttons {
+      width: 50%;
+      margin: 0;
+      .project_text {
+        text-align: left;
+      }
+    }
+    .project_demo_button {
+      margin-inline: 0;
+    }
+    &:nth-child(even) {
+      .project_image {
+        order: 2;
+      }
+      .project_texts_and_buttons {
+        order: 1;
+      }
+    }
+  }
+  @media (min-width: 960px) {
+    align-items: center;
+  }
+}
+
+/* CONTACT CARD */
+.contact_detail_card {
+  padding: $base-padding * 0.25 $base-padding * 0.5;
+  background-color: $clr-secondary;
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    color: $clr-accent;
+    .icon {
+      background-color: $clr-accent;
+    }
+  }
+}
+
+/* ICONS */
+.icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $clr-accent;
+  }
+}
+
+/* Contact icons*/
+.contact_detail_card {
+  .tel_icon {
+    mask: url(../../images/contacts/telephone-24.svg) no-repeat center;
+  }
+  .email_icon {
+    mask: url(../../images/contacts/email-24.svg) no-repeat center;
+  }
+  .location_pin_icon {
+    mask: url(../../images/contacts/location-pin-24.svg) no-repeat center;
+  }
+}
+
+/* Social icons */
+.socials {
+  .x_icon {
+    mask: url(../../images/contacts/twitterx-24.svg) no-repeat center;
+  }
+  .linkedin_icon {
+    mask: url(../../images/contacts/linkedin-24.svg) no-repeat center;
+  }
+  .github_icon {
+    mask: url(../../images/contacts/github-24.svg) no-repeat center;
+  }
+}
