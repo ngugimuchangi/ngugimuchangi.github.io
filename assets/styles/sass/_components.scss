@@ -31,11 +31,9 @@
   border: 1px solid $clr-accent;
 
   &:hover {
+    color: $clr-primary;
     background-color: $clr-accent;
     border: 1px solid $clr-accent;
-    box-shadow: 0 0 0.2rem 0 $clr-accent;
-    transform: translateY(-0.25rem);
-    transition: all 0.3s ease-in-out;
   }
   @media (min-width: 768px) {
     color: white;
@@ -162,12 +160,16 @@
 .contact_detail_card {
   .tel_icon {
     mask: url(../../images/contacts/telephone-24.svg) no-repeat center;
+    -webkit-mask: url(../../images/contacts/telephone-24.svg) no-repeat center;
   }
   .email_icon {
     mask: url(../../images/contacts/email-24.svg) no-repeat center;
+    -webkit-mask: url(../../images/contacts/email-24.svg) no-repeat center;
   }
   .location_pin_icon {
     mask: url(../../images/contacts/location-pin-24.svg) no-repeat center;
+    -webkit-mask: url(../../images/contacts/location-pin-24.svg) no-repeat
+      center;
   }
 }
 
@@ -175,11 +177,14 @@
 .socials {
   .x_icon {
     mask: url(../../images/contacts/twitterx-24.svg) no-repeat center;
+    -webkit-mask: url(../../images/contacts/twitterx-24.svg) no-repeat center;
   }
   .linkedin_icon {
     mask: url(../../images/contacts/linkedin-24.svg) no-repeat center;
+    -webkit-mask: url(../../images/contacts/linkedin-24.svg) no-repeat center;
   }
   .github_icon {
     mask: url(../../images/contacts/github-24.svg) no-repeat center;
+    -webkit-mask: url(../../images/contacts/github-24.svg) no-repeat center;
   }
 }

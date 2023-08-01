@@ -37,7 +37,7 @@ header {
 }
 .hero .hero_image {
   width: 100%;
-  margin-top: -150px;
+  margin-top: -120px;
   filter: grayscale(60%);
 }
 .hero .hero_text_and_button {
@@ -224,11 +224,9 @@ footer .footer_socials {
   border: 1px solid #f0bf6c;
 }
 .button_secondary:hover {
+  color: #030c0f;
   background-color: #f0bf6c;
   border: 1px solid #f0bf6c;
-  box-shadow: 0 0 0.2rem 0 #f0bf6c;
-  transform: translateY(-0.25rem);
-  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .button_secondary {
@@ -352,23 +350,29 @@ footer .footer_socials {
 /* Contact icons*/
 .contact_detail_card .tel_icon {
   mask: url(../../images/contacts/telephone-24.svg) no-repeat center;
+  -webkit-mask: url(../../images/contacts/telephone-24.svg) no-repeat center;
 }
 .contact_detail_card .email_icon {
   mask: url(../../images/contacts/email-24.svg) no-repeat center;
+  -webkit-mask: url(../../images/contacts/email-24.svg) no-repeat center;
 }
 .contact_detail_card .location_pin_icon {
   mask: url(../../images/contacts/location-pin-24.svg) no-repeat center;
+  -webkit-mask: url(../../images/contacts/location-pin-24.svg) no-repeat center;
 }
 
 /* Social icons */
 .socials .x_icon {
   mask: url(../../images/contacts/twitterx-24.svg) no-repeat center;
+  -webkit-mask: url(../../images/contacts/twitterx-24.svg) no-repeat center;
 }
 .socials .linkedin_icon {
   mask: url(../../images/contacts/linkedin-24.svg) no-repeat center;
+  -webkit-mask: url(../../images/contacts/linkedin-24.svg) no-repeat center;
 }
 .socials .github_icon {
   mask: url(../../images/contacts/github-24.svg) no-repeat center;
+  -webkit-mask: url(../../images/contacts/github-24.svg) no-repeat center;
 }
 
 h1 {
@@ -392,8 +396,12 @@ mark {
   background-color: transparent;
 }
 
+b {
+  font-weight: 600;
+}
+
 .text_body {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
