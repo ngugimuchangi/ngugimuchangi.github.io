@@ -312,12 +312,6 @@ footer .footer_socials {
   .project_card .project_demo_button {
     margin-inline: 0;
   }
-  .project_card:nth-child(even) .project_image {
-    order: 2;
-  }
-  .project_card:nth-child(even) .project_texts_and_buttons {
-    order: 1;
-  }
 }
 @media (min-width: 960px) {
   .project_card {
