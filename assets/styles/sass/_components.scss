@@ -115,14 +115,6 @@
     .project_demo_button {
       margin-inline: 0;
     }
-    &:nth-child(even) {
-      .project_image {
-        order: 2;
-      }
-      .project_texts_and_buttons {
-        order: 1;
-      }
-    }
   }
   @media (min-width: 960px) {
     align-items: center;
